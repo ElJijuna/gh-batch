@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/ElJIjuna/gh-batch/compare/v1.1.0...v1.1.1) (2026-04-30)
+
+
+### Bug Fixes
+
+* add gh CLI preflight check for missing install or missing auth ([d6ca725](https://github.com/ElJIjuna/gh-batch/commit/d6ca7255eccd16a168632d41c7651bc9a0c31e6d))
+
 # [1.1.0](https://github.com/ElJIjuna/gh-batch/compare/v1.0.0...v1.1.0) (2026-04-30)
 
 
