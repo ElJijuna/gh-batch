@@ -1,0 +1,40 @@
+{
+  "name": "gh-batch",
+  "version": "0.0.1",
+  "description": "Batch operations for GitHub repositories using the gh CLI",
+  "keywords": [
+    "gh",
+    "github",
+    "cli",
+    "batch",
+    "clone"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "PiLMee",
+    "email": "pilmee@gmail.com",
+    "url": "https://github.com/ElJijuna"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ElJIjuna/gh-batch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ElJijuna/gh-batch/issues"
+  },
+  "homepage": "https://github.com/ElJijuna/gh-batch#readme",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "gh-batch": "./index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "commander": "^14.0.3"
+  }
+}
