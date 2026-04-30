@@ -1,7 +1,16 @@
 import { execSync } from 'child_process';
+import { existsSync } from 'fs';
+import { resolve } from 'path';
 import * as readline from 'readline';
 
-export async function cloneRepos(owner, { yes = false } = {}) {
+export async function cloneRepos(owner, { yes = false, path = '.' } = {}) {
+  const targetPath = resolve(path);
+
+  if (!existsSync(targetPath)) {
+    console.error(`Path does not exist: ${targetPath}`);
+    process.exit(1);
+  }
+
   let repos;
   try {
     const output = execSync(
@@ -34,13 +43,14 @@ export async function cloneRepos(owner, { yes = false } = {}) {
     }
   }
 
-  console.log(`\nCloning ${repos.length} repositories from ${owner}...`);
+  console.log(`\nCloning ${repos.length} repositories into ${targetPath}...`);
   let failed = 0;
 
   for (const repo of repos) {
     process.stdout.write(`  ${repo.name}... `);
     try {
       execSync(`gh repo clone ${repo.nameWithOwner} ${repo.name}`, {
+        cwd: targetPath,
         stdio: ['ignore', 'ignore', 'pipe'],
       });
       console.log('done');
