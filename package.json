@@ -1,6 +1,6 @@
 {
   "name": "gh-batch",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Batch operations for GitHub repositories using the gh CLI",
   "keywords": [
     "gh",
