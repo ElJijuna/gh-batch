@@ -2,8 +2,10 @@ import { execSync } from 'child_process';
 import { existsSync } from 'fs';
 import { resolve } from 'path';
 import * as readline from 'readline';
+import { checkGh } from './check-gh.js';
 
 export async function cloneRepos(owner, { yes = false, path = '.' } = {}) {
+  checkGh();
   const targetPath = resolve(path);
 
   if (!existsSync(targetPath)) {
