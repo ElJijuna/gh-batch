@@ -16,7 +16,7 @@ npm install -g gh-batch
 Or clone and link locally:
 
 ```sh
-git clone https://github.com/pilmee/gh-batch.git
+git clone https://github.com/ElJijjuna/gh-batch.git
 cd gh-batch
 npm link
 ```
@@ -72,6 +72,19 @@ Skip the prompt:
 ```sh
 gh-batch clone repos ElJijuna -y
 ```
+
+## Contributing
+
+Commits must follow the [Conventional Commits](https://www.conventionalcommits.org/) spec. Releases and the CHANGELOG are generated automatically on every push to `main`.
+
+| Prefix | Triggers |
+|---|---|
+| `feat:` | minor version bump |
+| `fix:` | patch version bump |
+| `BREAKING CHANGE:` (in footer) | major version bump |
+| `chore:`, `docs:`, `refactor:` | no release |
+
+The `NPM_TOKEN` secret must be set in the repository settings for publishing to work.
 
 ## License
 
