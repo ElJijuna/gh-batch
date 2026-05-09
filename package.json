@@ -10,11 +10,7 @@
     "clone"
   ],
   "license": "MIT",
-  "author": {
-    "name": "PiLMee",
-    "email": "pilmee@gmail.com",
-    "url": "https://github.com/ElJijuna"
-  },
+  "author": "pilmee <pilmee@gmail.com> (https://github.com/ElJijuna)",
   "repository": {
     "type": "git",
     "url": "https://github.com/ElJIjuna/gh-batch.git"
